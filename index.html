@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Rotating image gallery</title>
+    </head>
+    <body>
+        <div class="image-container">
+            <!-- définit une variable CSS personnalisée, appelée ici --i, avec une valeur de 1. Les variables CSS commencent par deux tirets (--)  -->
+            <span style="--i: 1">
+                <img src="https://picsum.photos/id/237/300/200" />
+            </span>
+            <span style="--i: 2">
+                <img src="https://picsum.photos/id/200/300/200" />
+            </span>
+            <span style="--i: 3">
+                <img src="https://picsum.photos/id/230/300/200" />
+            </span>
+            <span style="--i: 4">
+                <img src="https://picsum.photos/id/244/300/200" />
+            </span>
+            <span style="--i: 5">
+                <img src="https://picsum.photos/id/233/300/200" />
+            </span>
+            <span style="--i: 6">
+                <img src="https://picsum.photos/id/259/300/200" />
+            </span>
+            <span style="--i: 7">
+                <img src="https://picsum.photos/id/269/300/200" />
+            </span>
+        </div>
+        <div class="btn-container">
+            <button class="btn" id="prev">Prev</button>
+            <button class="btn" id="nxt">Next</button>
+        </div>
+        <!-- -->
+    </body>
+    <!--La variable CSS --i est utilisée pour décaler l’animation de chaque lettre
+    (   animation-delay: calc(var(--i) * 0.1s);) , Résultat : les lettres apparaissent
+    une par une, avec un petit délai entre elles.
+--></html>
