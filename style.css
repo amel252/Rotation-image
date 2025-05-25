@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    height: 100vh;
+    /* signifie que l'élément aura une hauteur égale à 100% de la hauteur de la fenêtre (viewport). */
+    justify-content: center;
+    background: black;
+    overflow: hidden;
+    /* overflow pour retirer le scroll  */
+}
+.image-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    transform: perspective(1000px) rotateY(0deg);
+    transition: transform 0.7s;
+}
+.image-container span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
+    /* rotateY(...) : fait pivoter l’élément autour de l’axe vertical (Y), comme si tu tournais une carte de gauche à droite.
+    var(--i) : c’est une variable CSS personnalisée.
+    calc(var(--i) * 45deg) : le calcul multiplie la valeur de --i par 45 degrés.
+    translateZ(400px) => pousse l'élément vers l’avant (vers le spectateur) de 400 pixels sur l’axe Z */
+}
+.image-container span img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+.btn-container {
+    position: absolute;
+    width: 80%;
+}
+.btn {
+    position: absolute;
+    bottom: -80px;
+    background-color: slateblue;
+    color: white;
+    border: none;
+
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn:hover {
+    filter: brightness(1.5);
+    /* brightness() : ajuste la luminosité de l’élément.
+    0.5 → 50% de luminosité → effet plus sombre
+    1.0 = valeur normale (aucun changement).
+    1.5 → 150% de luminosité → effet éclairci */
+}
+#prev {
+    left: 20%;
+}
+#nxt {
+    right: 20%;
+}

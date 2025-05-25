@@ -1,0 +1,5 @@
+.item {
+    --i: 0; /* changée dynamiquement */
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
+    position: absolute;
+}

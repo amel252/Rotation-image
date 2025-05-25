@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
         <title>Rotating image gallery</title>
     </head>
     <body>
@@ -29,6 +30,9 @@
             <span style="--i: 7">
                 <img src="https://picsum.photos/id/269/300/200" />
             </span>
+            <span style="--i: 8">
+                <img src="https://picsum.photos/id/267/300/200" />
+            </span>
         </div>
         <div class="btn-container">
             <button class="btn" id="prev">Prev</button>
@@ -36,6 +40,7 @@
         </div>
         <!-- -->
     </body>
+    <script src="script.js"></script>
     <!--La variable CSS --i est utilisée pour décaler l’animation de chaque lettre
     (   animation-delay: calc(var(--i) * 0.1s);) , Résultat : les lettres apparaissent
     une par une, avec un petit délai entre elles.
